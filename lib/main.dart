@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'features/main/main_provider.dart';
+import 'features/main/main_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,18 +12,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
-      // theme: ThemeData.dark(),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Material App Bar'),
-        ),
-        body: Center(
-          child: Container(
-            child: Text('Hello World'),
-          ),
-        ),
-      ),
-    );
+        title: 'Material App',
+        theme: ThemeData.light(useMaterial3: true),
+        debugShowCheckedModeBanner: false,
+        home: MultiProvider(
+          providers: [
+            ChangeNotifierProvider(
+              create: (context) => MenuAppController(),
+            ),
+          ],
+          child: MainScreen(),
+        ));
   }
 }

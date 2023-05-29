@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 
-class ColorConstants {
-  ColorConstants._();
+@immutable
+class StringConstants {
+  const StringConstants._();
 
-  static const Color white = Colors.white;
-  static const Color black = Colors.black;
-  static const Color mountainMeadow = Color(0xFFA6ABC8);
-  static const Color deeppurple = Color(0xFF5A67BA);
-  static const Color lightpurple = Color(0xFF707FDD);
-  static const Color purple = Color(0xFF5A6ACF);
-  static const Color boulder = Color(0xFFF1F2F7);
-  static const Color blackone = Color(0xFF273240);
-  static const Color blacktwo = Color(0xFF082431);
-
+  //Side Menu
+  static const String drawerHeader= "GOODFOOD";
+  static const String drawerMenu= "MENU";
+  static const String drawerDashboard = "Dashboard";
+  static const String drawerFoodOrder = "Food Order";
+  static const String drawerManageMenu = "Manage Menu";
+  static const String drawerCustomerReview = "Customer Review";
+  static const String drawerOthers = "OTHERS";
+  static const String drawerSettings = "Settings";
+  static const String drawerPayment = "Payment";
+  static const String drawerAccounts = "Accounts";
+  static const String drawerHelp = "Help";
 }
