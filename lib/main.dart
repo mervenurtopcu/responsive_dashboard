@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'features/main/main_provider.dart';
 import 'features/main/main_screen.dart';
 
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
               create: (context) => MenuAppController(),
             ),
           ],
-          child: MainScreen(),
+          child:  MainScreen(),
         ));
   }
 }

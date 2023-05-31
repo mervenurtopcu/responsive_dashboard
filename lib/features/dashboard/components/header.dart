@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:food_dashboard/products/constants/color_constants.dart';
 import 'package:provider/provider.dart';
@@ -20,11 +19,10 @@ class Header extends StatelessWidget {
             icon: Icon(Icons.menu),
             onPressed: context.read<MenuAppController>().controlMenu,
           ),
-        // if (!Responsive.isMobile(context))
-        //   Spacer(flex: Responsive.isDesktop(context) ? 1 : 2),
         const Expanded(child: SearchField()),
         const ProfileCard(),
-        IconButton(onPressed: () {},
+        IconButton(
+            onPressed: () {},
             icon: const Icon(Icons.notifications_none_outlined))
       ],
     );
@@ -39,7 +37,7 @@ class ProfileCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 16),
+      margin: EdgeInsets.only(left: defaultPadding/2),
       padding: const EdgeInsets.symmetric(
         horizontal: defaultPadding,
         vertical: defaultPadding / 2,
@@ -52,12 +50,12 @@ class ProfileCard extends StatelessWidget {
         children: [
           Image.asset(
             "assets/png/hamburger.png",
-            height: 32,
+            height: 24,
           ),
           if (!Responsive.isMobile(context))
             Padding(
               padding:
-              const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
+                  const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
               child: Text("Delicious Burger"),
             ),
           Icon(Icons.keyboard_arrow_down),
@@ -91,7 +89,10 @@ class SearchField extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: const BorderRadius.all(Radius.circular(10)),
             ),
-            child:Icon(Icons.search_rounded,color: ColorConstants.mountainMeadow,),
+            child: Icon(
+              Icons.search_rounded,
+              color: ColorConstants.mountainMeadow,
+            ),
           ),
         ),
       ),
