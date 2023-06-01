@@ -28,8 +28,8 @@ class StringConstants {
   static const String viewReport = "View Report";
   static const String IDR = 'IDR 7.852.000';
   static const String percentage = '2.1% ';
+  static const String amount = '2.568 ';
   static const String lastWeek = 'vs last week';
-  //static const String
   static const String subText = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.';
 
 

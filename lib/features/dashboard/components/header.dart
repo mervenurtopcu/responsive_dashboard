@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_dashboard/products/constants/color_constants.dart';
 import 'package:provider/provider.dart';
-
 import '../../../products/layout/responsive_layout.dart';
 import '../../main/main_provider.dart';
 
@@ -16,7 +15,7 @@ class Header extends StatelessWidget {
       children: [
         if (!Responsive.isDesktop(context))
           IconButton(
-            icon: Icon(Icons.menu),
+            icon: const Icon(Icons.menu),
             onPressed: context.read<MenuAppController>().controlMenu,
           ),
         const Expanded(child: SearchField()),
@@ -37,7 +36,7 @@ class ProfileCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: defaultPadding/2),
+      margin: const EdgeInsets.only(left: defaultPadding/2),
       padding: const EdgeInsets.symmetric(
         horizontal: defaultPadding,
         vertical: defaultPadding / 2,
@@ -53,12 +52,12 @@ class ProfileCard extends StatelessWidget {
             height: 24,
           ),
           if (!Responsive.isMobile(context))
-            Padding(
+            const Padding(
               padding:
-                  const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
+                  EdgeInsets.symmetric(horizontal: defaultPadding / 2),
               child: Text("Delicious Burger"),
             ),
-          Icon(Icons.keyboard_arrow_down),
+          const Icon(Icons.keyboard_arrow_down),
         ],
       ),
     );
@@ -84,12 +83,12 @@ class SearchField extends StatelessWidget {
         suffixIcon: InkWell(
           onTap: () {},
           child: Container(
-            padding: EdgeInsets.all(16 * 0.75),
-            margin: EdgeInsets.symmetric(horizontal: 16 / 2),
-            decoration: BoxDecoration(
-              borderRadius: const BorderRadius.all(Radius.circular(10)),
+            padding: const EdgeInsets.all(16 * 0.75),
+            margin: const EdgeInsets.symmetric(horizontal: 16 / 2),
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
-            child: Icon(
+            child: const Icon(
               Icons.search_rounded,
               color: ColorConstants.mountainMeadow,
             ),

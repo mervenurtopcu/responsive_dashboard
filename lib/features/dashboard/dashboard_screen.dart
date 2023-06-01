@@ -57,29 +57,24 @@ class _WebUi extends StatelessWidget {
               Expanded(
                   flex: 2,
                   child: Padding(
-                    padding: !Responsive.isDesktop(context)
-                        ? const EdgeInsets.only(
-                            left: defaultPadding, right: defaultPadding)
-                        : const EdgeInsets.only(left: defaultPadding),
+                    padding: const EdgeInsets.only(left: defaultPadding),
                     child: Container(
                       color: Colors.transparent,
                       child: const Revenue(),
                     ),
                   )),
-              if (Responsive.isDesktop(context))
-                const VerticalDivider(
-                  color: ColorConstants.mountainMeadow,
-                ),
-              if (Responsive.isDesktop(context))
-                Expanded(
-                    flex: 1,
-                    child: Padding(
-                      padding: const EdgeInsets.only(right: defaultPadding),
-                      child: Container(
-                        color: Colors.transparent,
-                        child: const OrderTime(),
-                      ),
-                    )),
+              const VerticalDivider(
+                color: ColorConstants.mountainMeadow,
+              ),
+              Expanded(
+                  flex: 1,
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: defaultPadding),
+                    child: Container(
+                      color: Colors.transparent,
+                      child: const OrderTime(),
+                    ),
+                  )),
             ],
           ),
         ),
@@ -93,50 +88,39 @@ class _WebUi extends StatelessWidget {
               Expanded(
                   flex: 1,
                   child: Padding(
-                    padding: !Responsive.isDesktop(context)
-                        ? const EdgeInsets.only(
-                            left: defaultPadding,
-                            right: defaultPadding,
-                            bottom: defaultPadding / 2)
-                        : const EdgeInsets.only(
-                            left: defaultPadding, bottom: defaultPadding / 2),
+                    padding: const EdgeInsets.only(
+                        left: defaultPadding, bottom: defaultPadding / 2),
                     child: Container(
                       color: Colors.transparent,
                       child: const YourRating(),
                     ),
                   )),
-              if (Responsive.isDesktop(context) || Responsive.isTablet(context))
-                const VerticalDivider(
-                  color: ColorConstants.mountainMeadow,
+              const VerticalDivider(
+                color: ColorConstants.mountainMeadow,
+              ),
+              Expanded(
+                  flex: 1,
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: defaultPadding / 2),
+                    child: Container(
+                      color: Colors.transparent,
+                      child: const MostOrderedFood(),
+                    ),
+                  )),
+              const VerticalDivider(
+                color: ColorConstants.mountainMeadow,
+              ),
+              Expanded(
+                flex: 1,
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                      right: defaultPadding, bottom: defaultPadding / 2),
+                  child: Container(
+                    color: Colors.transparent,
+                    child: const Order(),
+                  ),
                 ),
-              if (Responsive.isDesktop(context) || Responsive.isTablet(context))
-                Expanded(
-                    flex: 1,
-                    child: Padding(
-                      padding: !Responsive.isDesktop(context)
-                          ? const EdgeInsets.only(
-                              right: defaultPadding, bottom: defaultPadding / 2)
-                          : const EdgeInsets.only(bottom: defaultPadding / 2),
-                      child: Container(
-                        color: Colors.transparent,
-                        child: const MostOrderedFood(),
-                      ),
-                    )),
-              if (Responsive.isDesktop(context))
-                const VerticalDivider(
-                  color: ColorConstants.mountainMeadow,
-                ),
-              if (Responsive.isDesktop(context))
-                Expanded(
-                    flex: 1,
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                          right: defaultPadding, bottom: defaultPadding / 2),
-                      child: Container(
-                        color: Colors.transparent,
-                        child: const Order(),
-                      ),
-                    )),
+              ),
             ],
           ),
         ),

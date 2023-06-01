@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_dashboard/products/constants/string_constants.dart';
-
 import '../../../products/constants/color_constants.dart';
 
 class OrderTime extends StatelessWidget {
@@ -23,14 +22,13 @@ class OrderTime extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
                 elevation: 1,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
               child: const Text(
-               StringConstants.viewReport,
+                StringConstants.viewReport,
                 style:
                     TextStyle(color: ColorConstants.lightpurple, fontSize: 8),
               ),
@@ -40,7 +38,7 @@ class OrderTime extends StatelessWidget {
         Expanded(
           child: Image.asset(
             'assets/png/order_time_chart.png',
-           // fit: BoxFit.fill
+            // fit: BoxFit.fill
           ),
         )
       ],

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_dashboard/products/constants/color_constants.dart';
 import 'package:food_dashboard/products/constants/string_constants.dart';
-import 'package:food_dashboard/products/layout/responsive_layout.dart';
 
 class Revenue extends StatefulWidget {
   const Revenue({Key? key}) : super(key: key);
@@ -11,7 +10,6 @@ class Revenue extends StatefulWidget {
 }
 
 class _RevenueState extends State<Revenue> {
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -29,14 +27,13 @@ class _RevenueState extends State<Revenue> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
                 elevation: 1,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
               child: const Text(
-               StringConstants.viewReport,
+                StringConstants.viewReport,
                 style:
                     TextStyle(color: ColorConstants.lightpurple, fontSize: 8),
               ),
@@ -57,10 +54,13 @@ class _RevenueState extends State<Revenue> {
                   color: Colors.green,
                 ),
               ),
-              TextSpan(text: StringConstants.percentage, style: TextStyle(color: Colors.green,fontSize: 12)),
+              TextSpan(
+                  text: StringConstants.percentage,
+                  style: TextStyle(color: Colors.green, fontSize: 12)),
               TextSpan(
                 text: StringConstants.lastWeek,
-                style: TextStyle(color: ColorConstants.mountainMeadow,fontSize: 12),
+                style: TextStyle(
+                    color: ColorConstants.mountainMeadow, fontSize: 12),
               ),
             ],
           ),
