@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_dashboard/products/constants/color_constants.dart';
+import 'package:food_dashboard/products/constants/string_constants.dart';
 import 'package:food_dashboard/products/layout/responsive_layout.dart';
 
 class Revenue extends StatefulWidget {
@@ -17,10 +18,9 @@ class _RevenueState extends State<Revenue> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
-          //mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const Text(
-              "Revenue",
+              StringConstants.dashboardRevenue,
               style: TextStyle(fontSize: 14, color: Colors.black),
             ),
             const Spacer(),
@@ -36,7 +36,7 @@ class _RevenueState extends State<Revenue> {
                 ),
               ),
               child: const Text(
-                'View Report',
+               StringConstants.viewReport,
                 style:
                     TextStyle(color: ColorConstants.lightpurple, fontSize: 8),
               ),
@@ -44,7 +44,7 @@ class _RevenueState extends State<Revenue> {
           ],
         ),
         const Text(
-          'IDR 7.852.000',
+          StringConstants.IDR,
           style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
         RichText(
@@ -57,9 +57,9 @@ class _RevenueState extends State<Revenue> {
                   color: Colors.green,
                 ),
               ),
-              TextSpan(text: '2.1% ', style: TextStyle(color: Colors.green,fontSize: 12)),
+              TextSpan(text: StringConstants.percentage, style: TextStyle(color: Colors.green,fontSize: 12)),
               TextSpan(
-                text: 'vs last week',
+                text: StringConstants.lastWeek,
                 style: TextStyle(color: ColorConstants.mountainMeadow,fontSize: 12),
               ),
             ],

@@ -4,6 +4,7 @@ import 'package:food_dashboard/features/dashboard/components/order.dart';
 import 'package:food_dashboard/features/dashboard/components/order_time.dart';
 import 'package:food_dashboard/features/dashboard/components/revenue.dart';
 import 'package:food_dashboard/features/dashboard/components/your_rating.dart';
+import 'package:food_dashboard/products/constants/string_constants.dart';
 import 'package:food_dashboard/products/layout/responsive_layout.dart';
 
 import '../../products/constants/color_constants.dart';
@@ -26,29 +27,29 @@ class DashboardScreen extends StatelessWidget {
           const Divider(color: ColorConstants.mountainMeadow,),
           const Align(alignment: Alignment.centerLeft,child: Padding(
             padding: EdgeInsets.only(left: defaultPadding),
-            child: Text('Dashboard',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
+            child: Text(StringConstants.dashboard,style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
           )),
           const SizedBox(height: defaultPadding / 2),
-           Container(color: Colors.transparent,height: 500,child: Revenue(),),
+           Container(color: Colors.transparent,height: 500,child: const Revenue(),),
           const SizedBox(height: defaultPadding / 2),
           Responsive.isTablet(context) ? Row(
             children: [
-              Expanded(flex:1,child: Container(color: Colors.transparent,height: 500,child: YourRating(),)),
+              Expanded(flex:1,child: Container(color: Colors.transparent,height: 500,child: const YourRating(),)),
               const VerticalDivider(color: ColorConstants.mountainMeadow,),
-              Expanded(flex:1,child: Container(color: Colors.transparent,height: 500,child: MostOrderedFood(),)),
+              Expanded(flex:1,child: Container(color: Colors.transparent,height: 500,child: const MostOrderedFood(),)),
             ],
           ): Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(color: Colors.transparent,height: 500,child: YourRating(),),
+              Container(color: Colors.transparent,height: 500,child: const YourRating(),),
               const SizedBox(height: defaultPadding / 2),
-              Container(color: Colors.transparent,height: 500,child: MostOrderedFood(),),
+              Container(color: Colors.transparent,height: 500,child: const MostOrderedFood(),),
             ],
           ),
           const SizedBox(height: defaultPadding / 2),
-          Container(color: Colors.transparent,height: 500,child: OrderTime(),),
+          Container(color: Colors.transparent,height: 500,child: const OrderTime(),),
           const SizedBox(height: defaultPadding / 2),
-          Container(color: Colors.transparent,height: 500,child: Order(),),
+          Container(color: Colors.transparent,height: 500,child: const Order(),),
         ],
       ),
     )):  
@@ -62,7 +63,7 @@ class DashboardScreen extends StatelessWidget {
           const Divider(color: ColorConstants.mountainMeadow,),
           const Align(alignment: Alignment.centerLeft,child: Padding(
             padding: EdgeInsets.only(left: defaultPadding),
-            child: Text('Dashboard',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
+            child: Text(StringConstants.dashboard,style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
           )),
           const SizedBox(height: defaultPadding * 2),
           Expanded(
@@ -71,12 +72,12 @@ class DashboardScreen extends StatelessWidget {
               children: [
                 Expanded(flex:2,child: Padding(
                   padding: !Responsive.isDesktop(context) ? const EdgeInsets.only(left: defaultPadding,right: defaultPadding) : const EdgeInsets.only(left: defaultPadding),
-                  child: Container(color: Colors.transparent,child: Revenue(),),
+                  child: Container(color: Colors.transparent,child: const Revenue(),),
                 )),
                 if(Responsive.isDesktop(context)) const VerticalDivider(color: ColorConstants.mountainMeadow,),
                 if(Responsive.isDesktop(context)) Expanded(flex:1,child: Padding(
                   padding: const EdgeInsets.only(right: defaultPadding),
-                  child: Container(color: Colors.transparent,child: OrderTime(),),
+                  child: Container(color: Colors.transparent,child: const OrderTime(),),
                 )),
               ],
             ),
@@ -88,17 +89,17 @@ class DashboardScreen extends StatelessWidget {
               children: [
                 Expanded(flex:1,child: Padding(
                   padding: !Responsive.isDesktop(context) ? const EdgeInsets.only(left: defaultPadding,right: defaultPadding,bottom: defaultPadding/2) : const EdgeInsets.only(left: defaultPadding,bottom: defaultPadding/2),
-                  child: Container(color: Colors.transparent,child: YourRating(),),
+                  child: Container(color: Colors.transparent,child: const YourRating(),),
                 )),
                 if(Responsive.isDesktop(context) || Responsive.isTablet(context)) const VerticalDivider(color: ColorConstants.mountainMeadow,),
                 if(Responsive.isDesktop(context) || Responsive.isTablet(context))Expanded(flex:1,child: Padding(
                   padding: !Responsive.isDesktop(context) ? const EdgeInsets.only(right: defaultPadding,bottom: defaultPadding/2) : const EdgeInsets.only(bottom: defaultPadding/2),
-                  child: Container(color: Colors.transparent,child: MostOrderedFood(),),
+                  child: Container(color: Colors.transparent,child: const MostOrderedFood(),),
                 )),
                 if(Responsive.isDesktop(context)) const VerticalDivider(color: ColorConstants.mountainMeadow,),
                 if(Responsive.isDesktop(context)) Expanded(flex:1,child: Padding(
                   padding: const EdgeInsets.only(right: defaultPadding,bottom: defaultPadding/2),
-                  child: Container(color: Colors.transparent,child: Order(),),
+                  child: Container(color: Colors.transparent,child: const Order(),),
                 )),
               ],
             ),
@@ -109,49 +110,3 @@ class DashboardScreen extends StatelessWidget {
   }
 }
 
-//
-// class DashboardScreen extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return  SafeArea(
-//       child: SingleChildScrollView(
-//         primary: false,
-//         padding:  EdgeInsets.all(defaultPadding),
-//         child: Column(
-//           crossAxisAlignment: CrossAxisAlignment.center,
-//           children: [
-//             Header(),
-//             Divider(color: ColorConstants.mountainMeadow),
-//             SizedBox(height: defaultPadding),
-//             Align(alignment: Alignment.centerLeft,child: Text('Dashboard',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),)),
-//             SizedBox(height: defaultPadding * 2),
-//            Row(
-//            crossAxisAlignment: CrossAxisAlignment.start,
-//              children: [
-//                Expanded(flex:2,child: Align(alignment:Alignment.topCenter,child: Revenue())),
-//                SizedBox(width: defaultPadding),
-//                if(Responsive.isDesktop(context)) Expanded(flex:1,child: Align(alignment:Alignment.topCenter,child: OrderTime()))
-//              ],
-//            ),
-//            Row(
-//              children: [
-//                 const Expanded(flex:1,child: Align(alignment:Alignment.topCenter,child: YourRating())),
-//                 SizedBox(width: defaultPadding),
-//                if(Responsive.isDesktop(context)) Expanded(flex:1,child: Align(alignment:Alignment.topCenter,child: MostOrderedFood())),
-//                 SizedBox(width: defaultPadding),
-//                if(Responsive.isDesktop(context)) Expanded(flex:1,child: Align(alignment:Alignment.topCenter,child: Order()))
-//              ],
-//            ),
-//             if(!Responsive.isDesktop(context)) SizedBox(width: defaultPadding/2),
-//             if(!Responsive.isDesktop(context)) MostOrderedFood(),
-//             if(!Responsive.isDesktop(context)) SizedBox(width: defaultPadding/2),
-//             if(!Responsive.isDesktop(context)) OrderTime(),
-//             if(!Responsive.isDesktop(context)) SizedBox(width: defaultPadding/2),
-//             if(!Responsive.isDesktop(context)) Order(),
-//           ],
-//
-//         ),
-//       ),
-//     );
-//   }
-// }

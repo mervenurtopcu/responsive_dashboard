@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_dashboard/products/constants/string_constants.dart';
 
 import '../../../products/constants/color_constants.dart';
 
@@ -13,7 +14,7 @@ class Order extends StatelessWidget {
         Row(
           children: [
             const Text(
-              "Order",
+              StringConstants.dashboardOrder,
               style: TextStyle(fontSize: 14, color: Colors.black),
             ),
             const Spacer(),
@@ -29,7 +30,7 @@ class Order extends StatelessWidget {
                 ),
               ),
               child: const Text(
-                'View Report',
+                StringConstants.viewReport,
                 style:
                 TextStyle(color: ColorConstants.lightpurple, fontSize: 8),
               ),
@@ -37,7 +38,7 @@ class Order extends StatelessWidget {
           ],
         ),
         const Text(
-          '2.568',
+          StringConstants.percentage,
           style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
         RichText(
@@ -50,9 +51,9 @@ class Order extends StatelessWidget {
                   color: Colors.red,
                 ),
               ),
-              TextSpan(text: '2.1% ', style: TextStyle(color: Colors.red)),
+              TextSpan(text: StringConstants.percentage, style: TextStyle(color: Colors.red)),
               TextSpan(
-                text: 'vs last week',
+                text:  StringConstants.lastWeek,
                 style: TextStyle(color: ColorConstants.mountainMeadow),
               ),
             ],

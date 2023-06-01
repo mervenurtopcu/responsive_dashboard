@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_dashboard/products/constants/string_constants.dart';
 
 import '../../../products/constants/color_constants.dart';
 
@@ -13,7 +14,7 @@ class OrderTime extends StatelessWidget {
         Row(
           children: [
             const Text(
-              "Order Time",
+              StringConstants.dashboardOrderTime,
               style: TextStyle(fontSize: 14, color: Colors.black),
             ),
             const Spacer(),
@@ -29,7 +30,7 @@ class OrderTime extends StatelessWidget {
                 ),
               ),
               child: const Text(
-                'View Report',
+               StringConstants.viewReport,
                 style:
                     TextStyle(color: ColorConstants.lightpurple, fontSize: 8),
               ),
