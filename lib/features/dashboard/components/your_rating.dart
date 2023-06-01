@@ -6,26 +6,19 @@ class YourRating extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(defaultPadding),
-      height: 400,
-      decoration: BoxDecoration(
-        color: Colors.transparent,
-        borderRadius: const BorderRadius.all(Radius.circular(10)),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text(
-            "Your Rating",
-            style: TextStyle(fontSize: 14, color: Colors.black),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          "Your Rating",
+          style: TextStyle(fontSize: 14, color: Colors.black),
+        ),
+        Expanded(
+          child: Image.asset(
+        'assets/png/your_rating_chart.png',
           ),
-          Image.asset(
-            'assets/png/your_rating_chart.png',
-              fit: BoxFit.fill
-          )
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
